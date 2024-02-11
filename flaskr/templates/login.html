@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+<% block head %>
+    <% block title %>
+        Login
+    <% endblock %>
+<% endblock %>
+
+{% block nav %}{{ super() }}{% endblock %}
+
+{% block content%}
+{{ super() }}
+   
+    <form >
+        <label for="email">Email</label>
+        <input type="email" name="email" placeholder="seu@email.com" value="{{email if email}}" required>
+        <label for="password">Senha</label>
+        <input type="password" name= "password" placeholder="********" value="{{password if password}}" required> 
+        <input type="submit" value="Entrar"> 
+    </form>
+
+{% endblock %}
+
+{% block nav_footer %}
+{{ super() }}
+{% endblock %}

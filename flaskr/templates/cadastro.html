@@ -1,0 +1,23 @@
+{% extends ("base.html") %}
+
+<% block head %>
+	<% block title %>
+		Cadastro
+	<% endblock %>
+<% endblock %>
+
+{% block nav %}{{ super() }}{% endblock %}
+
+<%block content%>
+<form class="form_cadastro">
+    <label for="email">Nome</label>
+    <input type="username" name="username" placeholder="Nome completo" value="{{username if username}}" required>
+    <label for="email">Email</label>
+    <input type="email" name="email" placeholder="seu@email.com" value="{{email if email}}" required>
+   	<label for="password">Senha</label>
+   	<input type="password" name= "password" placeholder="********" value="{{password if password}}" required> 
+    <input type="submit" value="Cadastrar"> 
+</form>
+<% endblock %>
+
+{% block footer %}{{ super() }}{% endblock %}
